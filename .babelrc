@@ -1,0 +1,36 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "useBuiltIns": true,
+      "targets": {
+        "browsers": [
+          ">1%",
+          "last 2 versions",
+          "Firefox ESR",
+          "not ie < 10"
+        ]
+      }
+    }],
+    "stage-1",
+    "react"
+  ],
+  "plugins": [
+    "lodash",
+    ["import", {
+      "libraryName": "antd",
+      "libraryDirectory": "es",
+      "style": true
+    }]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-inline-elements",
+        "transform-react-pure-class-to-function",
+        "transform-react-remove-prop-types"
+      ]
+    }
+  }
+}
