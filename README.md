@@ -54,6 +54,7 @@ Then open [http://localhost:8080/](http://localhost:8080/) on your web browser.
 `npm run build` and upload content from `dist/` to your server.
 
 ## Inspired By
+
 * [Иван Акулов про фронтенд](https://t.me/iamakulov_channel)
 * [Put your Webpack on a diet part 1](https://www.contentful.com/blog/2017/10/10/put-your-webpack-on-a-diet-part-1/)
 * [Put your Webpack on a diet part 2](https://www.contentful.com/blog/2017/10/19/put-your-webpack-bundle-on-a-diet-part-2/)
@@ -67,7 +68,8 @@ Then open [http://localhost:8080/](http://localhost:8080/) on your web browser.
 
 ## Thanks to
 
-@azukov for grate help
+* [Aleksandr Zhukov](https://github.com/AleksandrZhukov) for great help
+* [VectorM](https://github.com/VectorM) for help
 
 ## License
 
