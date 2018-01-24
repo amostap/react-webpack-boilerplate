@@ -1,0 +1,5 @@
+:global {
+  .ant-notification-topRight {
+    top: 40px !important;
+  }
+}
