@@ -15,7 +15,6 @@ module.exports = merge(config, {
   output: {
     path: path.resolve(__dirname, 'dist/'),
     filename: '[name].js',
-    chunkFilename: '[name].chunk.js',
     publicPath: '/'
   },
   devtool: 'eval-source-map',

@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const webpack = require('webpack');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const config = require('./webpack.base.config');
@@ -19,7 +20,7 @@ module.exports = merge(config, {
   },
   devtool: 'cheap-module-source-map',
   plugins: [
-    new webpack.HashedModuleIdsPlugin(),
+    // new BundleAnalyzerPlugin(),
     new webpack.DefinePlugin(GLOBALS),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.UglifyJsPlugin({
@@ -61,7 +62,6 @@ module.exports = merge(config, {
         test: /\.css$/,
         include: [
           path.resolve(__dirname, './src/components'),
-          path.resolve(__dirname, './src/elements'),
           path.resolve(__dirname, './src/layouts')
         ],
         use: ExtractTextPlugin.extract({
