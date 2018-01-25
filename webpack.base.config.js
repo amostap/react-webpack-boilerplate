@@ -6,23 +6,23 @@ const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 module.exports = {
   entry: {
-    src: ['babel-polyfill', 'app.jsx']
+    app: ['babel-polyfill', 'app.jsx']
   },
   resolve: {
     modules: ['node_modules', 'src'],
-    extensions: ['.js', '.jsx', '.json', '.css']
+    extensions: ['.js', '.jsx', '.json', '.css'],
+    alias: { 'lodash-es': 'lodash' }
   },
   plugins: [
     new MomentLocalesPlugin(),
     new WebpackChunkHash(),
+    new webpack.HashedModuleIdsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks(module) {
-        return module.context && module.context.indexOf('node_modules') !== -1;
-      }
+      minChunks: m => m.context && m.context.includes('node_modules')
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest',
+      name: 'runtime',
       minChunks: Infinity
     }),
     new HtmlWebpackPlugin({

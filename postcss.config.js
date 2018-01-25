@@ -4,7 +4,7 @@ module.exports = {
     require('postcss-flexbugs-fixes')(),
     require('autoprefixer')({
       browsers: [
-        '> 1%',
+        '> 2%',
         'last 2 versions',
         'Firefox ESR',
         'not ie < 10'
