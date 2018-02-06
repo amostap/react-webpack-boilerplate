@@ -18,6 +18,9 @@ module.exports = merge(config, {
     path: path.resolve(__dirname, 'dist/'),
     publicPath: '/'
   },
+  resolve: {
+    alias: { 'lodash-es': 'lodash' }
+  },
   devtool: 'cheap-module-source-map',
   plugins: [
     // new BundleAnalyzerPlugin(),

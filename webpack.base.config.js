@@ -10,8 +10,7 @@ module.exports = {
   },
   resolve: {
     modules: ['node_modules', 'src'],
-    extensions: ['.js', '.jsx', '.json', '.css'],
-    alias: { 'lodash-es': 'lodash' }
+    extensions: ['.js', '.jsx', '.json', '.css']
   },
   plugins: [
     new MomentLocalesPlugin(),
