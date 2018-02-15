@@ -6,7 +6,6 @@ module.exports = {
       browsers: [
         '> 2%',
         'last 2 versions',
-        'Firefox ESR',
         'not ie < 10'
       ]
     })
